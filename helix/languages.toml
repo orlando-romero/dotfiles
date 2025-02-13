@@ -1,0 +1,35 @@
+[language-server.mylang-lsp]
+command = "mylang-lsp"
+
+[[language]]
+name = "rust"
+auto-format = true
+formatter = { command = "rustfmt"}
+
+# [[language]]
+# name = "python"
+# auto-format = true
+
+# [language.formatter]
+# command = "black"
+# args = ["--line-length", "88", "--quiet", "-"]
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = [ "pyright", "ruff" ]
+
+[language-server.pyright.config.python.analysis]
+# typeCheckingMode = "off"
+typeCheckingMode = "basic"
+# typeCheckingMode = "strict"
+
+[language-server.ruff]
+command = "ruff-lsp"
+
+[language-server.ruff.config.settings]
+args = ["--ignore", "E501"]
+
+[language.formatter]
+command = "black"
+args = ["--line-length", "120", "--quiet", "-"]

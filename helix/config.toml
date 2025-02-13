@@ -1,0 +1,126 @@
+# theme = "onedark"
+# theme = "tokyonight_storm"
+# theme = "tokyonight"
+# theme = "catppuccin_mocha"
+# theme = "dracula_at_night"
+# theme = "monokai_pro_spectrum"
+theme = "custom"
+
+[editor]
+true-color = true
+color-modes = true
+mouse = true
+cursorline = true
+line-number = "relative"
+bufferline = "multiple"
+text-width = 40
+auto-format = true
+# rulers = [120]
+# cursorcolumn = true
+# gutters = ["diagnostics", "spacer", "diff"]
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+
+[editor.whitespace]
+# render = "all"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = false
+
+[editor.lsp]
+display-messages = true
+
+[editor.statusline]
+center = ["file-name"]
+right = ["version-control", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[keys.normal]
+# C-s = ":w"
+
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
+
+C-left = "move_prev_word_start"
+C-right = "move_next_word_end"
+
+S-left = "extend_char_left"
+S-right = "extend_char_right"
+
+S-C-left = "extend_prev_word_start"
+S-C-right = "extend_next_word_start"
+
+"A-down" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
+"A-up" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
+
+"tab" = "indent"
+"S-tab" = "unindent"
+
+S-end = ["select_mode", "goto_line_end", "normal_mode"]
+S-home = ["select_mode", "goto_line_start", "normal_mode"]
+
+esc = ["collapse_selection", "keep_primary_selection"]
+
+"G" = "goto_last_line"
+"_" = "goto_first_nonwhitespace"
+"g" = {"_" = "goto_line_end"}
+
+"q" = "move_prev_word_start"
+
+# Jumplist
+"C-A-b" = "save_selection"
+"A-s" = "save_selection"
+# "A-j" = "save_selection"
+"A-," = "jump_backward"
+"A-." = "jump_forward"
+
+C-up = ["scroll_up", "scroll_up", "scroll_up", "scroll_up"]
+C-down = ["scroll_down", "scroll_down", "scroll_down", "scroll_down"] 
+
+# move/copy line below/above
+"A-j" = [ "extend_to_line_bounds", "delete_selection", "paste_after" ]
+"A-k" = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
+"A-J" = [ "extend_to_line_bounds", "yank", "paste_after" ]
+"A-K" = [ "extend_to_line_bounds", "yank", "paste_before" ]
+# previous/next buffer
+H = "goto_previous_buffer"
+L = "goto_next_buffer"
+
+[keys.insert]
+"A-j" = "move_visual_line_down"
+"A-k" = "move_visual_line_up"
+"A-h" = "move_char_left"
+"A-l" = "move_char_right"
+
+"A-}" = "goto_next_paragraph"
+"A-{" = "goto_prev_paragraph"
+
+S-A-down = ["extend_to_line_bounds", "yank", "open_below", "normal_mode", "replace_with_yanked", "collapse_selection"]
+S-A-up = ["extend_to_line_bounds", "yank", "open_above", "normal_mode", "replace_with_yanked", "collapse_selection"]
+
+C-left = ["move_prev_word_start", "move_char_left", "move_char_right"]
+C-right = ["move_next_word_end", "move_char_right"]
+A-left = ["move_prev_word_start", "move_char_left", "move_char_right"]
+A-right = ["move_next_word_end", "move_char_right"]
+
+S-left = "extend_char_left"
+S-right = "extend_char_right"
+
+"A-d" = "delete_selection"
+
+[keys.select]
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
+
