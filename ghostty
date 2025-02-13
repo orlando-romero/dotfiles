@@ -1,0 +1,17 @@
+keybind = super+shift+left=resize_split:left,20
+keybind = super+shift+right=resize_split:right,20
+keybind = super+shift+up=resize_split:up,20
+keybind = super+shift+down=resize_split:down,20
+
+keybind = super+shift+h=resize_split:left,20
+keybind = super+shift+l=resize_split:right,20
+keybind = super+shift+k=resize_split:up,20
+keybind = super+shift+j=resize_split:down,20
+
+keybind = super+h=goto_split:left
+keybind = super+l=goto_split:right
+keybind = super+k=goto_split:up
+keybind = super+j=goto_split:down
+
+
+keybind = super+shift+equal=equalize_splits
